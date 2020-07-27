@@ -52,8 +52,7 @@ public class ResourceCentreTest {
 	public void addChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		chromebookList.add(cb);
-		System.out.println("Chromebook added");
+
 	}
 	
 	@Test
@@ -95,7 +94,7 @@ public class ResourceCentreTest {
 	}
 	
 	@Test
-	public boolean doLoanChromebookTest(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
+	public static boolean doLoanChromebookTest(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
 		// fail("Not yet implemented");
 		// write your code here
 		boolean isLoaned = false;
@@ -117,7 +116,7 @@ public class ResourceCentreTest {
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
 		String due = Helper.readString("Enter due date > ");
-		Boolean isLoaned = doLoanChromebook(chromebookList, tag, due);
+		Boolean isLoaned = doLoanChromebookTest(chromebookList, tag, due);
 		if (isLoaned == false) {
 			System.out.println("Invalid asset tag");
 		} else {

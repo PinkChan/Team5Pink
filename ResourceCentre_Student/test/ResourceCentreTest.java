@@ -98,6 +98,7 @@ public class ResourceCentreTest {
 	public static boolean doLoanChromebookTest(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
 		// fail("Not yet implemented");
 		// write your code here
+		//Natasha
 		boolean isLoaned = false;
 		for (int i = 0; i < chromebookList.size(); i++) {
 			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
@@ -114,6 +115,7 @@ public class ResourceCentreTest {
 
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
+		//Natasha
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
 		String due = Helper.readString("Enter due date > ");
@@ -136,6 +138,7 @@ public class ResourceCentreTest {
 	public static boolean doReturnChromebookTest(ArrayList<Chromebook> chromebookList, String tag) {
 		//fail("Not yet implemented");
 		// write your code here
+		//Natasha
 		    for (int i = 0; i < chromebookList.size(); i++) {
 			    if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag()) && chromebookList.get(i).getIsAvailable() == false) 
 				    chromebookList.get(i).setIsAvailable(true);
@@ -147,6 +150,7 @@ public class ResourceCentreTest {
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
+		//Natasha
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
 		Boolean isReturned = doReturnChromebook(chromebookList, tag);

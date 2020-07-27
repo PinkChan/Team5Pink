@@ -112,21 +112,6 @@ public class ResourceCentreTest {
 		}
 		return true;
 	}
-
-	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
-		//Natasha
-		ResourceCentre.viewAllChromebook(chromebookList);
-		String tag = Helper.readString("Enter asset tag > ");
-		String due = Helper.readString("Enter due date > ");
-		Boolean isLoaned = doLoanChromebook(chromebookList, tag, due);
-		if (isLoaned == false) {
-			System.out.println("Invalid asset tag");
-		} else {
-			System.out.println("Chromebook " + tag + " loaned out");
-		}
-
-	}
 	
 	@Test
 	public void doReturnCamcorderTest() {
@@ -148,20 +133,6 @@ public class ResourceCentreTest {
 		    }
 		return isReturned
 	}
-	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
-		//Natasha
-		ResourceCentre.viewAllChromebook(chromebookList);
-		String tag = Helper.readString("Enter asset tag > ");
-		Boolean isReturned = doReturnChromebook(chromebookList, tag);
-		// write your code here
-		if (isReturned == false) {
-			System.out.println("Invalid asset tag");
-		} else {
-			System.out.println("Chromebook " + tag + " returned");
-		}
-	}
-}
 	
 	@After
 	public void tearDown() throws Exception {

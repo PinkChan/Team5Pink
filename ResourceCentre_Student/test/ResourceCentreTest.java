@@ -88,9 +88,7 @@ public class ResourceCentreTest {
 
 	@Test
 	public void doLoanCamcorderTest() {
-		//fail("Not yet implemented");
-		// write your code here
-		
+
 	}
 	
 	@Test
@@ -131,8 +129,11 @@ public class ResourceCentreTest {
 	
 	@Test
 	public void doReturnCamcorderTest() {
-		//fail("Not yet implemented");
-		// write your code here
+        ResourceCentre.doReturnCamcorder(camcorderList, cc1.getAssetTag());
+		assertNotNull("Test if there is valid Camcorder arraylist to return to", camcorderList);
+
+        assertTrue("Test if item has been returned", cc1.getIsAvailable());
+        assertTrue("Test if item has been returned", cc2.getIsAvailable());
 		
 	}
 	@Test

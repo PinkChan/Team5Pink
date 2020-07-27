@@ -130,10 +130,10 @@ public class ResourceCentreTest {
 	@Test
 	public void doReturnCamcorderTest() {
         ResourceCentre.doReturnCamcorder(camcorderList, cc1.getAssetTag());
-		assertNotNull("Test if there is valid Camcorder arraylist to return to", camcorderList);
+		assertNotNull("Testing if there is a valid Camcorder arraylist to return", camcorderList);
 
-        assertTrue("Test if item has been returned", cc1.getIsAvailable());
-        assertTrue("Test if item has been returned", cc2.getIsAvailable());
+        assertTrue("Test to check if the item has been returned", cc1.getIsAvailable());
+        assertTrue("Test to check if the item has been returned", cc2.getIsAvailable());
 		
 	}
 	@Test

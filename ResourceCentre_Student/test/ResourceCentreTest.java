@@ -97,7 +97,6 @@ public class ResourceCentreTest {
 	public static boolean doLoanChromebookTest(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
 		// fail("Not yet implemented");
 		// write your code here
-		//Natasha
 		boolean isLoaned = false;
 		for (int i = 0; i < chromebookList.size(); i++) {
 			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
@@ -111,20 +110,25 @@ public class ResourceCentreTest {
 		}
 		return true;
 	}
-
+	  
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
+   
 		// write your code here
-		//Natasha
+     
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
 		String due = Helper.readString("Enter due date > ");
+<<<<<<< HEAD
 		Boolean isLoaned = doLoanChromebookTest(chromebookList, tag, due);
+=======
+		Boolean isLoaned =doLoanChromebook(chromebookList, tag, due);
+>>>>>>> branch 'master' of https://github.com/PinkChan/Team5Pink
 		if (isLoaned == false) {
 			System.out.println("Invalid asset tag");
+         
 		} else {
-			System.out.println("Chromebook " + tag + " loaned out");
+			System.out.println("Camcorder " + tag + " loaned out");
 		}
-
 	}
 	
 	@Test
@@ -137,7 +141,6 @@ public class ResourceCentreTest {
 	public static boolean doReturnChromebookTest(ArrayList<Chromebook> chromebookList, String tag) {
 		//fail("Not yet implemented");
 		// write your code here
-		//Natasha
 		    for (int i = 0; i < chromebookList.size(); i++) {
 			    if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag()) && chromebookList.get(i).getIsAvailable() == false) 
 				    chromebookList.get(i).setIsAvailable(true);
@@ -147,20 +150,21 @@ public class ResourceCentreTest {
 		    }
 		return isReturned
 	}
-	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
-		//Natasha
-		ResourceCentre.viewAllChromebook(chromebookList);
-		String tag = Helper.readString("Enter asset tag > ");
-		Boolean isReturned = doReturnChromebook(chromebookList, tag);
-		// write your code here
-		if (isReturned == false) {
-			System.out.println("Invalid asset tag");
-		} else {
-			System.out.println("Chromebook " + tag + " returned");
-		}
-	}
-}
+	
+	  public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
+   	 
+		  // write your code here
+   	 
+		  ResourceCentre.viewAllChromebook(chromebookList);
+		  String tag = Helper.readString("Enter asset tag > ");
+		  Boolean isReturned = doReturnChromebook(chromebookList, tag);
+		  // write your code here
+		  if (isReturned == false) {
+			  System.out.println("Invalid asset tag");
+		  } else {  
+			  System.out.println("Camcorder " + tag + " returned");
+		  }
+	  }
 	
 	@After
 	public void tearDown() throws Exception {

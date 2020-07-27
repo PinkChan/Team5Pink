@@ -118,16 +118,14 @@ public class ResourceCentreTest {
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
 		String due = Helper.readString("Enter due date > ");
-<<<<<<< HEAD
+
 		Boolean isLoaned = doLoanChromebookTest(chromebookList, tag, due);
-=======
-		Boolean isLoaned =doLoanChromebook(chromebookList, tag, due);
->>>>>>> branch 'master' of https://github.com/PinkChan/Team5Pink
+
 		if (isLoaned == false) {
 			System.out.println("Invalid asset tag");
          
 		} else {
-			System.out.println("Camcorder " + tag + " loaned out");
+			System.out.println("Chromebook " + tag + " loaned out");
 		}
 	}
 	
@@ -162,7 +160,7 @@ public class ResourceCentreTest {
 		  if (isReturned == false) {
 			  System.out.println("Invalid asset tag");
 		  } else {  
-			  System.out.println("Camcorder " + tag + " returned");
+			  System.out.println("Chromebook " + tag + " returned");
 		  }
 	  }
 	

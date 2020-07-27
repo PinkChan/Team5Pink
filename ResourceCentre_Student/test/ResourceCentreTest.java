@@ -52,6 +52,8 @@ public class ResourceCentreTest {
 	public void addChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		chromebookList.add(cb);
+		System.out.println("Chromebook added");
 	}
 	
 	@Test
